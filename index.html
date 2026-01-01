@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RestaurantePro</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Tesseract.js para OCR -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>RestaurantePro</h1>
+  </header>
+
+  <main>
+    <!-- Cadastro de Produtos -->
+    <section class="card">
+      <h2>Cadastrar Produto</h2>
+      <form id="form-produto">
+        <input type="text" id="nome" placeholder="Nome do Produto" required>
+        <input type="number" id="preco" placeholder="Preço (R$)" step="0.01" required>
+        <input type="number" id="quantidade" placeholder="Quantidade" required>
+        <input type="text" id="fornecedor" placeholder="Fornecedor" required>
+        <input type="date" id="data" required>
+        <select id="categoria"></select>
+        <input type="file" id="foto" accept="image/*">
+        <button type="submit">Adicionar Produto</button>
+      </form>
+      <button id="cadastrar-camera">Cadastrar via Câmera</button>
+    </section>
+
+    <!-- Categorias -->
+    <section class="card">
+      <h2>Categorias</h2>
+      <input type="text" id="nova-categoria" placeholder="Nome da Categoria">
+      <button id="adicionar-categoria">Adicionar Categoria</button>
+      <div id="lista-categorias"></div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="card">
+      <h2>Produtos Cadastrados</h2>
+      <div id="lista-produtos"></div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section class="card">
+      <h2>Estatísticas de Gasto</h2>
+      <p>Total gasto: R$ <span id="total-gasto">0,00</span></p>
+      <canvas id="grafico-gastos"></canvas>
+    </section>
+  </main>
+</body>
+</html>
