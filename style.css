@@ -1,0 +1,110 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#f0f4ff,#e0f0ff);
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #0077cc;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Main cards */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Form inputs */
+input, select, button {
+  width: 100%;
+  margin: 0.3rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* Produtos */
+#lista-produtos div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background: #f0f4ff;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+#lista-produtos img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+/* Categorias */
+#lista-categorias div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background: #e0f0ff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+#lista-categorias button {
+  background: #cc0000;
+}
+
+#lista-categorias button:hover {
+  background: #990000;
+}
+
+/* Estatísticas */
+canvas {
+  max-width: 100%;
+  margin-top: 1rem;
+}
